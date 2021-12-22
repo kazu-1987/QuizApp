@@ -1,0 +1,16 @@
+
+<h1>マイページ</h1>
+<div class="container">
+  <p><%= @name %>さんの投稿一覧</p>
+  <% @tweets.each do |tweet| %>
+  <div class="group">
+    <p><%= tweet.text %></p>
+    <% if user_signed_in? && current_user.id == tweet.user_id %>
+      <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+      <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+    <% end %>
+    <a>いいね  </a><%= tweet.favorites.count %>
+    <%= tweet.created_at %>
+  </div>
+  <% end %>
+</div>

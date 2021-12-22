@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>みんなのちょこっとボイス</h1>
+  <button class="button-tyr"><a class="tyr-btn" href="/tweets/new">投稿する</a></button>
+    <div class="contents row">
+      <% @tweets.each do |tweet| %>
+      <div class="group">
+        <p><%= tweet.text %></p>
+        <a href="/users/<%= tweet.user.id %>">
+         <%= tweet.user.username %><a>さんの投稿</a>
+        </a>
+        <% if current_user.already_favorited?(tweet) %>
+          <%= link_to "いいねを外す", tweet_favorites_path(tweet), method: :delete %>
+          <%= tweet.favorites.count %>
+        <% else %>
+          <%= link_to "いいね", tweet_favorites_path(tweet), method: :post %>
+          <%= tweet.favorites.count %>
+        <% end %>
+        <%= tweet.created_at %>
+      </div>
+      <% end %>
+    </div>
+</div>

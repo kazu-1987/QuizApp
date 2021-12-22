@@ -1,0 +1,105 @@
+.contents {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+
+
+h1 {
+  text-align: center;
+}
+
+.info {
+  background-color: #eeeeee;
+  margin-top: 20px;
+  text-align: center;
+  font-size: small;
+}
+
+.tyr-btn {
+  text-decoration: none;
+}
+
+.button-tyr {
+  background-color: #fbeff2;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, .4);
+  padding: 5px 10px 5px 10px;
+}
+
+.button-index {
+  background-color: #fbeff2;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, .4);
+  padding: 50px 50px 50px 50px;
+  margin: 30px 30px 30px 30px;
+  width: 150px;
+}
+
+.content-quiz1 {
+  display: flex;
+  justify-content: center;
+}
+
+.content-quiz2 {
+  display: flex;
+  justify-content: center;
+}
+
+.command {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border: 1px solid #d1d1d1;
+  padding: 10px 0px 10px 20px;
+  background-color: azure;
+  border-radius: 20px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, .4);
+}
+
+
+.group {
+  margin-top: 20px;
+  border: 1px solid #d1d1d1;
+  padding: 10px 0px 10px 20px;
+  background-color: azure;
+  border-radius: 20px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, .4);
+}
+
+.field {
+  justify-content: center;
+  padding: 5px;
+
+}
+
+.top-session {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+  width: 400px;
+  margin: auto;
+  padding-bottom: 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 20px;
+}
+
+.try_date {
+  margin-top: 20px;
+}
+
+.created {
+  text-align: end;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+footer {
+  text-align: center;
+  font-size: 60%;
+}

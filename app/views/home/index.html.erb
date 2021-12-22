@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheets" href="style.css">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <div class="container">
+    <div class="contents">
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+        <%= link_to "マイページ", user_path(current_user) %>
+        <%= link_to "ちょこっとボイス", tweets_path %>
+      <% else %>
+        <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-light" %>
+     <% end %>
+    </div>
+    <div class="info">
+      <p>【 お知らせ 】</p>
+      <p>12/2 店長用問題を５問追加しました。</p>
+      <p>11/29 社員用問題文を一部修正しました。</p>
+    </div>
+      <% if user_signed_in? %>
+        <div class="content-quiz1">
+          <button class="button-index"><%= link_to "店長", store_manager_quizs_path, class: 'tyr-btn', id:"try-btn-id" %></button>
+          <button class="button-index"><%= link_to "社員", employee_quizs_path, class: "tyr-btn", id:"try-btn-id" %></button>
+        </div>
+        <div class="content-quiz2">
+          <button class="button-index"><%= link_to "PA", store_manager_quizs_path, class: 'tyr-btn', id:"try-btn-id" %></button>
+          <button class="button-index"><%= link_to "理念", employee_quizs_path, class: "tyr-btn", id:"try-btn-id" %></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</body>
+<footer>
+</footer>
+</html>
