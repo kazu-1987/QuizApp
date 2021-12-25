@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :tweets, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
+  validates :username, presence: true
+
   def already_favorited?(tweet)
     self.favorites.exists?(tweet_id: tweet.id)
   end
